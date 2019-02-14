@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/user.css">
+</head>
+<body>
+        <div class="menu-links">
+                <div id="menu-links-left">
+                  <span><a href="index.html">Maintenance Tracker</a></span>
+                </div>
+                <div class="menu-icon">
+            
+                 <label for="menu-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </label>
+                  
+                </div>
+            
+                      <input type="checkbox" id="menu-check">
+                      <div class="menu-links-right">
+                       
+                        <a href="userCreate.html">Create Request</a>
+                        <a href="index.html">log out</a>
+                      </div>      
+                    </div>
+                    <div class="container">
+    <header id="header">
+      <div class="wrapper">
+        <section class="list">
+    
+            <div class="list-header">
+                <h3>My requests</h3>
+            </div> 
+            <span class="alert alert-warning">Error message</span>
+            <span class="alert alert-success">Error message</span>
+            <div class="table-res">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>S/N</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Dept</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Doe</td>
+                        <td>john@example.com</td>
+                        <td class="approved"><small>Approved</small></td>
+                        <td>Engineering</td>
+                        <td>
+                            <a href="user-view-details.html" class="btn-sm btn-primary" title="Click to view request"><i class="fa fa-eye"></i></a>
+                            <a href="#" class="btn-sm btn-delete" title="Click to delete request"><i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Doe</td>
+                        <td>john@example.com</td>
+                        <td>Approved</td>
+                        <td>Engineering</td>
+                        <td>
+                            <!--<a href="user-view-admin-view-details.html" class="btn-sm btn-primary"><i class="fa fa-edit"></i> </a>-->
+                            <a href="user-view-details.html" class="btn-sm btn-primary" title="Click to view request"><i class="fa fa-eye"></i></a>
+                            <a href="#" class="btn-sm btn-delete" title="Click to delete request"><i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Doe</td>
+                        <td>john@example.com</td>
+                        <td>Approved</td>
+                        <td>Engineering</td>
+                        <td>
+                            <!--<a href="user-view-admin-view-details.html" class="btn-sm btn-primary"><i class="fa fa-edit"></i> </a>-->
+                            <a href="user-view-details.html" class="btn-sm btn-primary" title="Click to view request"><i class="fa fa-eye"></i></a>
+                            <a href="#" class="btn-sm btn-delete" title="Click to delete request"><i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+            <ul class="pagination">
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+            </ul>
+        </section>
+    </div> <!--End of wrapper-->
+</header>
+</div>
+<footer>
+    <p>Maintenance Tracker, Copyright &copy; 2018</p>
+  </footer> 
+</body>
+</html>
