@@ -38,3 +38,12 @@ export const createRequest =(req, res) => {
     requests.push(request);
     res.send(request);
 };
+
+export const modifyRequest = (req, res) => {
+    const request = requests.find(r => r.id === parseInt(req.params.id));
+    if (!request) return res.status(404).send('The request with the given ID was not found.'); 
+    request.requesting = req.body.requesting;
+    request.name = req.body.name;
+    request.email= req.body.email;
+    res.send(request);
+};
