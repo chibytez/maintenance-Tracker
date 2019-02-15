@@ -47,3 +47,13 @@ export const modifyRequest = (req, res) => {
     request.email= req.body.email;
     res.send(request);
 };
+
+export const cancelRequest = (req, res) => {
+    const request = requests.find(r => r.id === parseInt(req.params.id));
+    if (!request) return res.status(404).send('The request with the given ID was not found.');
+ 
+    const index = requests.indexOf(request);
+    requests.splice(request, 1);
+ 
+    res.send(request);
+};
