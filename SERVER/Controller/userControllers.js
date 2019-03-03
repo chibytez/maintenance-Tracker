@@ -36,6 +36,7 @@ export const createRequest =(req, res) => {
         email: req.body.email
     }
     requests.push(request);
+    res.status(201);
     res.send(request);
 };
 
@@ -55,5 +56,6 @@ export const cancelRequest = (req, res) => {
     const index = requests.indexOf(request);
     requests.splice(request, 1);
  
+    res.status(201);
     res.send(request);
 };
