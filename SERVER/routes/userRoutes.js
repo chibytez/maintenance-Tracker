@@ -3,7 +3,7 @@
     createRequest,
     modifyRequest,
     cancelRequest
-} from '../Controller/userControllers';
+} from '../Controller/requestController';
 
 const userRoutes = (app) => {
     app.get('/api/v1/users/requests', getAllRequest );
