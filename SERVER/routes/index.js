@@ -1,8 +1,10 @@
 import userRoutes from './userRoutes';
+import auth from './authRoutes';
 
 const routes = (app) => {
 
     userRoutes(app);
+    auth(app);
 
     app.get('/', (request, response) => response.status(200).json({
         message: 'My Maintenance Tracker',
