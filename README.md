@@ -2,7 +2,7 @@
 
 # Description
 
-  Maintenance tracker app is an app that can users or client easily get access or keep tracker of their on going maintenance 
+  Maintenance tracker  is an app that allows users or client easily get acess access or keep track of their on going maintenance 
 
  # badges 
  [![Build Status](https://travis-ci.org/chibytez/maintenance-Tracker.svg?branch=develop)](https://travis-ci.org/chibytez/maintenance-Tracker)
