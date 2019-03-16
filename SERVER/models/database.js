@@ -1,26 +1,17 @@
-import { Pool } from 'pg';
+import pg from 'pg';
 
-import dotenv from 'dotenv';
+require('dotenv').config();
 
-dotenv.config();
+const DATABASE_URL = {
+  user: process.env.DB_USERNAME,
+  host: process.env.DB_HOST,
+  database: process.env.DB_DATABASE,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
+  max: 10,
+  idleTimeoutMillis: 30000,
+};
 
-let pool = null;
-
-switch (process.env.NODE_ENV) {
-  case 'test':
-    pool = new Pool({
-      connectionString: process.env.TEST_DB,
-    });
-    break;
-  case 'development':
-    pool = new Pool({
-      connectionString: process.env.DATABASE_URL,
-    });
-    break;
-  default:
-    pool = new Pool({
-      connectionString: process.env.DATABASE_URL,
-    });
-}
+const pool = new pg.Pool(DATABASE_URL);
 
 export default pool;

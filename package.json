@@ -4,7 +4,7 @@
   "description": "a maintenance tracker restful api app",
   "main": "app.js",
   "scripts": {
-    "test": " yc --reporter=text --reporter=lcov mocha ./SERVER/test/userRequest.spec.js --require babel-register --exit",
+    "test": " nyc --reporter=text --reporter=lcov mocha ./SERVER/test/userRequest.spec.js --require babel-register --exit",
     "start:dev": "nodemon  app.js --exec babel-node --presets es2015",
     "start": "babel-node app.js --exec  --presets es2015",
     "createTable": " node -r babel-register SERVER/migrations/createTable.js",
@@ -39,6 +39,8 @@
     "morgan": "^1.9.1",
     "nodemon": "^1.18.9",
     "pg": "^7.8.2",
+    "postgresql": "0.0.1",
+    "validatorjs": "^3.15.1",
     "winston": "^3.2.0"
   },
   "devDependencies": {
