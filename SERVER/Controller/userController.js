@@ -7,27 +7,27 @@ import { signUpValidation, loginValidation } from '../helper/validations';
 
 import user from '../models/database';
 
-const tokenGen = result => jwt.sign(
-  {
-    id: result.rows[0].id,
-    admin: result.rows[0].admin,
-  },
-  process.env.JWT_KEY,
-  {
-    expiresIn: '1h',
-  },
-);
+// const tokenGen = result => jwt.sign(
+//   {
+//     id: result.rows[0].id,
+//     admin: result.rows[0].admin,
+//   },
+//   process.env.JWT_KEY,
+//   {
+//     expiresIn: '1h',
+//   },
+// );
 
-const tokenify = (result, res) => {
-  const token = tokenGen(result);
-  res
-    .status(200)
-    .json({
-      auth: jwt.decode(token),
-      token,
-    })
-    .end();
-};
+// const tokenify = (result, res) => {
+//   const token = tokenGen(result);
+//   res
+//     .status(200)
+//     .json({
+//       auth: jwt.decode(token),
+//       token,
+//     })
+//     .end();
+// };
 
 export const signUp = (req, res) => {
   const {
